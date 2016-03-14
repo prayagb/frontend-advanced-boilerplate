@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-2">
+
+      <% flat = data.flats[owner] %>
+      <%= image_tag flat.owner_picture, class: "avatar-very-large " %>
+      <p><%= flat.owner_name %></p>
+      <h1><%= flat.summary %></h1>
+      <p><%= flat.city %></p>
+
+
+      <h2>Rating </h2>
+
+      <% flat.rating.times do  %>
+        <i class="fa fa-star" style="color:red"> </i>
+      <% end %>
+
+      <% (5 - flat.rating).times do %>
+        <i class="fa fa-star-o"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
