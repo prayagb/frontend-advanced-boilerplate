@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <% data.team.each do |value| %>
+      <div class="col-md-4">
+        <div class="card">
+          <h2><%= value.name.capitalize %></h2>
+          <%= value.role %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
